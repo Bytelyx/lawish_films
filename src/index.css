@@ -1,26 +1,41 @@
+
 @import "tailwindcss";
 
 @theme {
+  /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-editorial: 'Italiana', 'Cormorant Garamond', Georgia, serif;
   --font-display: 'Syne', sans-serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 
+  /* Gold Colors */
   --color-gold-300: #ebd8af;
   --color-gold-400: #ddbf88;
   --color-gold-500: #c5a880;
   --color-gold-600: #a88d67;
 
+  /* Noir Colors */
   --color-noir-950: #050507;
   --color-noir-900: #09090b;
   --color-noir-850: #0e0e13;
   --color-noir-800: #14141a;
   --color-noir-700: #1e1e24;
   --color-noir-600: #2b2b34;
+
+  /* Page Background Colors */
+  --color-home-bg: #09090b;
+  --color-page-bg: #FBF9F6;
+}
+
+/* Global Background Variables */
+:root {
+  --color-home-bg: #09090b;
+  --color-page-bg: #FBF9F6;
 }
 
 /* Lenis Recommended CSS */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -87,7 +102,7 @@ html.lenis, html.lenis body {
   box-shadow: 0 0 25px rgba(197, 168, 128, 0.15);
 }
 
-/* Luxury typography styling utilities */
+/* Luxury Typography Styling Utilities */
 .font-serif-luxury {
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
@@ -100,9 +115,13 @@ html.lenis, html.lenis body {
   font-family: 'Syne', sans-serif;
 }
 
-/* Subtle image vignettes */
+/* Subtle Image Vignettes */
 .vignette-radial {
-  background: radial-gradient(circle at center, transparent 40%, rgba(9, 9, 11, 0.85) 100%);
+  background: radial-gradient(
+    circle at center,
+    transparent 40%,
+    rgba(9, 9, 11, 0.85) 100%
+  );
 }
 
 .gradient-mask-b {
@@ -110,10 +129,11 @@ html.lenis, html.lenis body {
   -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
 }
 
-/* Hide scrollbar for clean horizontal reels */
+/* Hide Scrollbar for Clean Horizontal Reels */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

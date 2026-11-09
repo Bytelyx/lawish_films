@@ -40,21 +40,9 @@ export const Gallery = () => {
   const remainingPhotos = hasThreeStrips ? filteredPhotos.slice(stripsPhotoCount) : filteredPhotos;
 
   return (
-    <motion.div
-      variants={pageTransitionVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      className="w-full bg-[#09090b] text-white pt-32 sm:pt-40"
-    >
+    <motion.div variants={pageTransitionVariants} initial="initial" animate="animate" exit="exit" className="w-full bg-[#09090b] text-white pt-32 sm:pt-40">
       {/* Lightbox Modal */}
-      <Lightbox
-        images={filteredPhotos}
-        currentIndex={lightboxIndex}
-        isOpen={isLightboxOpen}
-        onClose={() => setIsLightboxOpen(false)}
-        onIndexChange={setLightboxIndex}
-      />
+      <Lightbox images={filteredPhotos} currentIndex={lightboxIndex} isOpen={isLightboxOpen} onClose={() => setIsLightboxOpen(false)} onIndexChange={setLightboxIndex}/>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
         {/* Header */}
